@@ -1,0 +1,159 @@
+/* # Front-end Style Guide ## Layout The designs were created to the following widths: - Mobile: 375px - Desktop: 1440px 
+## Colors ### Primary - Dark cyan: hsl(158, 36%, 37%) - Cream: hsl(30, 38%, 92%) 
+### Neutral - Very dark blue: hsl(212, 21%, 14%) - Dark grayish blue: hsl(228, 12%, 48%) - White: hsl(0, 0%, 100%) 
+## Typography 
+### Body Copy - Font size (paragraph): 14px 
+### Font - Family: [Montserrat]()
+  - Weights: 500, 700 - Family: [Fraunces](https: //fonts.google.com/specimen/Fraunces)
+  - Weights: 700
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+  /* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap');
+/* font-family: 'Fraunces', serif; */
+
+:root{
+  /* Primary */
+  --main-color:hsl(158, 36%, 37%);
+  --bg-color:hsl(30, 38%, 92%);
+  /* Neutral */
+  --dark-blue:hsl(212, 21%, 14%);
+  --dark-grayish: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@media (max-width:1440px) {}
+
+.all {
+  background-color: var(--bg-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.all .main-card {
+  width: 600px;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50% 50%;
+  background-color: var(--White);
+  border-radius: 12px;
+}
+.all .main-card>*{
+  flex-basis: 50%;
+}
+.all .main-card .img {
+  display: flex;
+  justify-content: center;
+  top: -50px;
+  overflow: hidden;
+}
+.all .main-card .img img{
+  width: 300px;
+}
+.all .main-card .detailes{
+  padding: 27px;
+  font-family: 'Fraunces', serif;
+  display: flex;
+  flex-direction:column ;
+  gap: 7px;
+}
+.all .main-card .detailes>p{
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark-grayish);
+  line-height:1.6;
+}
+.all .main-card .detailes p:first-child{
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.all .main-card .detailes .header{
+  /* line-height: 1; */
+  font-weight: bolder;
+}
+
+.all .main-card .detailes .price{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.all .main-card .detailes .price .new-price{
+  color: var(--main-color);
+}
+.all .main-card .detailes button,
+.all .main-card .detailes button span,
+.all .main-card .detailes button svg{
+    transition: 460ms;
+    transition-timing-function: ease-in-out;
+}
+.all .main-card .detailes button{
+  border: none;
+  padding-block: 20px;
+  margin-top: 20px;
+  background-color: var(--main-color);
+  font-size: 14px;
+  color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+.all .main-card .detailes button:hover{
+  box-shadow: 0 0 5px 0px var(--dark-blue) ;
+  gap: 27px;
+
+}
+
+.all .main-card .detailes button:hover svg{
+  transform: scale(110%);
+}
+
+@media (max-width:375px) {
+  .all {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .all .main-card {
+    height: calc(100% - 20vh);
+    width: 90vw;
+    flex-direction: column;
+    padding: 80px 20px;
+    
+  }
+  @import url(images/image-product-mobile.jpg);
+    .all .main-card .img img{
+      height: 100%;
+      width: ;
+    }
+}
